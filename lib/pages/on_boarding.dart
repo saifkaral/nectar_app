@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nectar_app/pages/login_page.dart';
 import 'package:nectar_app/widgets/wide_button.dart';
 
 class OnBoarding extends StatelessWidget {
@@ -25,7 +26,12 @@ class OnBoarding extends StatelessWidget {
                         SizedBox(width: 260,child: Text("Welcome to our store",style: TextStyle(color: Colors.white,fontSize: 48, fontWeight:FontWeight.w600),textAlign: TextAlign.center,),),
                         Text("Ger your groceries in as fast as one hour",style: TextStyle(color: Colors.white, fontSize: 13),),
                         SizedBox(height: 40,),
-                        WideButton(word: "Get Started",),
+                        InkWell(
+                          child: WideButton(word: "Get Started",),
+                          onTap: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage()));
+                          },
+                        )
                       ],
                     ),
                   ),

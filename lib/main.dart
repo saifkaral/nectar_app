@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:nectar_app/pages/on_boarding.dart';
 import 'package:nectar_app/pages/splash_screen.dart';
 
 void main() {
@@ -12,10 +11,7 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: OnBoarding(),
-      // routes: {
-      //   '/homepage':(context) => Hom()
-      // },
+      home: SplashScreen(),
     );
   }
 }
