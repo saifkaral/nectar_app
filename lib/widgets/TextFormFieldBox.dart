@@ -4,7 +4,7 @@ class TextFieldBox extends StatefulWidget {
   final String fieldType;
   final TextEditingController? controller;
   bool obscureText;
-  TextFieldBox({required this.fieldType,  required this.controller,this.obscureText = false,super.key});
+  TextFieldBox({required this.fieldType, required this.controller,this.obscureText = false,super.key});
 
   @override
   State<TextFieldBox> createState() => _TextFieldBoxState();
