@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nectar_app/pages/settings_page.dart';
 import 'package:nectar_app/widgets/groceries_tab.dart';
 import 'package:nectar_app/widgets/item_card.dart';
 
@@ -72,13 +73,37 @@ class HomeScreen extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: NavigationBar(
-        destinations: [
-          NavigationDestination(icon: Icon(Icons.shop), label: "Store"),
-          NavigationDestination(icon: Icon(Icons.shop), label: "Store"),
-          NavigationDestination(icon: Icon(Icons.shop), label: "Store"),
-          NavigationDestination(icon: Icon(Icons.shop), label: "Store"),
-          NavigationDestination(icon: Icon(Icons.shop), label: "Store"),
-        ]
+        selectedIndex: 0,
+        onDestinationSelected: (i) {
+          if (i == 1) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => SettingsPage()),
+            );
+            return;
+          }
+        },
+        destinations: const [
+          NavigationDestination(
+            icon: Icon(Icons.shop),
+            label: "Store",
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.account_box_outlined),
+            label: "Profile",
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.shop),
+            label: "Store",
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.shop),
+            label: "Store",
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.shop),
+            label: "Store"),
+        ],
       ),
     );
   }

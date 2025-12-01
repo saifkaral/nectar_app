@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nectar_app/pages/home_screen.dart';
+import 'package:nectar_app/pages/settings_page.dart';
 
 void main() {
   runApp(const MainApp());
