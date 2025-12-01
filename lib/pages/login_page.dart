@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nectar_app/pages/home_screen.dart';
 import 'package:nectar_app/widgets/TextFormFieldBox.dart';
 import 'package:nectar_app/widgets/wide_button.dart';
 
@@ -47,7 +48,7 @@ class _LoginPageState extends State<LoginPage> {
               child: Text("Forgot Password?")
               ),
               SizedBox(height: 30,),
-              WideButton(word: "Log In"),
+              InkWell(onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen(),)),child: WideButton(word: "Log In")),
               SizedBox(height: 20,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
