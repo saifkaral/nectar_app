@@ -10,8 +10,12 @@ class OnBoarding extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          Positioned.fill(child:
-            Image.asset("assets/images/Delivery_Man.jpg",fit: BoxFit.cover,alignment: Alignment(0.2, 0),)
+          Positioned.fill(
+            child: Image.asset(
+              "assets/images/Delivery_Man.jpg",
+              fit: BoxFit.cover,
+              alignment: Alignment(0.2, 0),
+            ),
           ),
           Column(
             mainAxisAlignment: MainAxisAlignment.end,
@@ -19,26 +23,52 @@ class OnBoarding extends StatelessWidget {
               SizedBox(
                 child: Center(
                   child: Padding(
-                    padding: const EdgeInsets.only(bottom: 50,left: 12,right: 12),
+                    padding: const EdgeInsets.only(
+                      bottom: 50,
+                      left: 12,
+                      right: 12,
+                    ),
                     child: Column(
                       children: [
-                        SizedBox(width: 48,child: Image.asset("assets/images/carrot.png")),
-                        SizedBox(width: 260,child: Text("Welcome to our store",style: TextStyle(color: Colors.white,fontSize: 48, fontWeight:FontWeight.w600),textAlign: TextAlign.center,),),
-                        Text("Ger your groceries in as fast as one hour",style: TextStyle(color: Colors.white, fontSize: 13),),
-                        SizedBox(height: 40,),
+                        SizedBox(
+                          width: 48,
+                          child: Image.asset("assets/images/carrot.png"),
+                        ),
+                        SizedBox(
+                          width: 260,
+                          child: Text(
+                            "Welcome to our store",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 48,
+                              fontWeight: FontWeight.w600,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                        Text(
+                          "Ger your groceries in as fast as one hour",
+                          style: TextStyle(color: Colors.white, fontSize: 13),
+                        ),
+                        SizedBox(height: 40),
                         InkWell(
-                          child: WideButton(word: "Get Started",),
+                          child: WideButton(word: "Get Started"),
                           onTap: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage()));
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => LoginPage(),
+                              ),
+                            );
                           },
-                        )
+                        ),
                       ],
                     ),
                   ),
                 ),
               ),
             ],
-          )
+          ),
         ],
       ),
     );

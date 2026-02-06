@@ -24,7 +24,10 @@ class _LoginPageState extends State<LoginPage> {
             children: [
               Padding(
                 padding: const EdgeInsets.only(top: 50.0),
-                child: SizedBox(width: 47,child: Image.asset("assets/images/Red_Carrot.png"),),
+                child: SizedBox(
+                  width: 47,
+                  child: Image.asset("assets/images/Red_Carrot.png"),
+                ),
               ),
               Align(
                 alignment: Alignment.topLeft,
@@ -32,34 +35,52 @@ class _LoginPageState extends State<LoginPage> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      SizedBox(height: 100,),
-                      Text("Loging",style: TextStyle(fontSize: 26,fontWeight: FontWeight.w600),),
+                      SizedBox(height: 100),
+                      Text(
+                        "Logging",
+                        style: TextStyle(
+                          fontSize: 26,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
                       Text("Enter your email and password"),
-                      SizedBox(height: 40,)
+                      SizedBox(height: 40),
                     ],
-                  )
+                  ),
                 ),
               ),
-              TextFieldBox(fieldType: "Email", controller: emailController,),
-              SizedBox(height: 30,),
-              TextFieldBox(fieldType: "Password", controller: passwordController, obscureText: true,),
-              SizedBox(height: 20,),
-              Align(alignment: Alignment.centerRight,
-              child: Text("Forgot Password?")
+              TextFieldBox(fieldType: "Email", controller: emailController),
+              SizedBox(height: 30),
+              TextFieldBox(
+                fieldType: "Password",
+                controller: passwordController,
+                obscureText: true,
               ),
-              SizedBox(height: 30,),
-              InkWell(onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen(),)),child: WideButton(word: "Log In")),
-              SizedBox(height: 20,),
+              SizedBox(height: 20),
+              Align(
+                alignment: Alignment.centerRight,
+                child: Text("Forgot Password?"),
+              ),
+              SizedBox(height: 30),
+              InkWell(
+                onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => HomeScreen()),
+                ),
+                child: WideButton(word: "Log In"),
+              ),
+              SizedBox(height: 20),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                Text("Don't have an account? "),
-                TextButton(onPressed: () {}, child: Text("Sign Up"),)
-              ],)
+                  Text("Don't have an account? "),
+                  TextButton(onPressed: () {}, child: Text("Sign Up")),
+                ],
+              ),
             ],
           ),
         ),
       ),
-    ); 
+    );
   }
 }

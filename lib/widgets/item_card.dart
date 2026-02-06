@@ -10,23 +10,32 @@ class ItemCard extends StatelessWidget {
 
   const ItemCard({
     required this.pathToImage,
-    required this.itemName, 
+    required this.itemName,
     required this.itemInfo,
     required this.itemPrice,
-    super.key
+    super.key,
   });
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Navigator.push(context, MaterialPageRoute(builder: (context) => ItemScreen(pathToImage: pathToImage, itemName: itemName, itemPrice:itemPrice),));
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => ItemScreen(
+              pathToImage: pathToImage,
+              itemName: itemName,
+              itemPrice: itemPrice,
+            ),
+          ),
+        );
       },
       child: Container(
         height: 240,
         width: 170,
         decoration: BoxDecoration(
-          border: BoxBorder.all(color: Color.fromARGB(255, 226, 226, 226),),
+          border: BoxBorder.all(color: Color.fromARGB(255, 226, 226, 226)),
           borderRadius: BorderRadius.circular(16),
           color: Colors.white,
         ),
@@ -41,21 +50,30 @@ class ItemCard extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(itemName, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),),
+                      Text(
+                        itemName,
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16,
+                        ),
+                      ),
                       Text(itemInfo),
                     ],
                   ),
                 ),
               ),
-              SizedBox(height: 24,),
+              SizedBox(height: 24),
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Text("\$$itemPrice", style: TextStyle(fontWeight:FontWeight.bold, fontSize: 20),),
+                  Text(
+                    "\$$itemPrice",
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                  ),
                   Spacer(),
-                  AddToCart()
+                  AddToCart(),
                 ],
-              )
+              ),
             ],
           ),
         ),

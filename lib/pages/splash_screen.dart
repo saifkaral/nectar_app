@@ -9,10 +9,12 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-  
-   Future <void> toBoarding() async {
+  Future<void> toBoarding() async {
     await Future.delayed(Duration(seconds: 3));
-    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => OnBoarding(),));
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(builder: (context) => OnBoarding()),
+    );
   }
 
   @override
@@ -24,14 +26,14 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255,83, 177, 117),
+      backgroundColor: Color.fromARGB(255, 83, 177, 117),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizedBox(width: 267,child: Image.asset("assets/images/logo.png"),),
-            SizedBox(height: 20,),
-            CircularProgressIndicator(color: Colors.white,)
+            SizedBox(width: 267, child: Image.asset("assets/images/logo.png")),
+            SizedBox(height: 20),
+            CircularProgressIndicator(color: Colors.white),
           ],
         ),
       ),

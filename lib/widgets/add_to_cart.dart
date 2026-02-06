@@ -12,12 +12,12 @@ class _AddToCartState extends State<AddToCart> {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: const Color.fromARGB(255,83, 177, 117),
-        borderRadius: BorderRadius.circular(10)
+        color: const Color.fromARGB(255, 83, 177, 117),
+        borderRadius: BorderRadius.circular(10),
       ),
       width: 30,
       height: 30,
-      child: Icon(Icons.add, color: Colors.white,),
+      child: Icon(Icons.add, color: Colors.white),
     );
   }
 }

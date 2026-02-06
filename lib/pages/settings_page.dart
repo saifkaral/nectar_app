@@ -68,7 +68,10 @@ class ProfileHeader extends StatelessWidget {
       padding: const EdgeInsets.all(20),
       child: Row(
         children: [
-          IconButton(icon:Icon(Icons.arrow_back_ios_new), onPressed: () => Navigator.pop(context),),
+          IconButton(
+            icon: Icon(Icons.arrow_back_ios_new),
+            onPressed: () => Navigator.pop(context),
+          ),
           Container(
             width: 60,
             height: 60,
@@ -84,9 +87,13 @@ class ProfileHeader extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(name,
-                  style: const TextStyle(
-                      fontSize: 18, fontWeight: FontWeight.w600)),
+              Text(
+                name,
+                style: const TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
               Text(email, style: const TextStyle(color: Colors.grey)),
             ],
           ),
@@ -102,19 +109,14 @@ class SettingsTile extends StatelessWidget {
   final IconData icon;
   final String text;
 
-  const SettingsTile({
-    super.key,
-    required this.icon,
-    required this.text,
-  });
+  const SettingsTile({super.key, required this.icon, required this.text});
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         Container(
-          padding:
-              const EdgeInsets.symmetric(horizontal: 15, vertical: 18),
+          padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 18),
           child: Row(
             children: [
               Icon(icon, size: 22),
@@ -148,10 +150,7 @@ class LogOutButton extends StatelessWidget {
         children: const [
           Icon(Icons.logout, size: 20),
           SizedBox(width: 8),
-          Text(
-            "Log Out",
-            style: TextStyle(fontSize: 16),
-          ),
+          Text("Log Out", style: TextStyle(fontSize: 16)),
         ],
       ),
     );
