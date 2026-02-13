@@ -11,6 +11,7 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   Future<void> toBoarding() async {
     await Future.delayed(Duration(seconds: 3));
+    if (!mounted) return;
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(builder: (context) => OnBoarding()),

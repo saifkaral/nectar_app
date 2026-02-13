@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nectar_app/pages/home_screen.dart';
-import 'package:nectar_app/widgets/TextFormFieldBox.dart';
+import 'package:nectar_app/widgets/text_form_field_box.dart';
 import 'package:nectar_app/widgets/wide_button.dart';
 
 class LoginPage extends StatefulWidget {
@@ -49,12 +49,16 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
               ),
-              TextFieldBox(fieldType: "Email", controller: emailController),
-              SizedBox(height: 30),
+              TextFieldBox(
+                fieldType: "Email",
+                controller: emailController,
+                isPasswordField: false,
+              ),
+              const SizedBox(height: 30),
               TextFieldBox(
                 fieldType: "Password",
                 controller: passwordController,
-                obscureText: true,
+                isPasswordField: true,
               ),
               SizedBox(height: 20),
               Align(
@@ -63,10 +67,12 @@ class _LoginPageState extends State<LoginPage> {
               ),
               SizedBox(height: 30),
               InkWell(
-                onTap: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => HomeScreen()),
-                ),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const HomeScreen()),
+                  );
+                },
                 child: WideButton(word: "Log In"),
               ),
               SizedBox(height: 20),
